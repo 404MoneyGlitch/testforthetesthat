@@ -1,0 +1,19 @@
+/* Trippy animations */
+@keyframes rgbSplit {
+  0% { 
+    text-shadow: -2px 0 #ff0000, 2px 0 #00ff00;
+    filter: hue-rotate(0deg);
+  }
+  50% { 
+    text-shadow: 2px 0 #0000ff, -2px 0 #ff0000;
+    filter: hue-rotate(180deg);
+  }
+  100% { 
+    text-shadow: -2px 0 #ff0000, 2px 0 #00ff00;
+    filter: hue-rotate(360deg);
+  }
+}
+
+.rgb-effect {
+  animation: rgbSplit 2s infinite;
+}

@@ -1,0 +1,61 @@
+#space {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  perspective: 180px;
+  height: 1000px;
+  margin: 0 auto;
+  background-image: url('https://wallpaper-house.com/data/out/12/wallpaper2you_534057.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#animate-button {
+  position: absolute;
+  top: 2em;
+  left: 3em;
+  border: none;
+  height: 10em;
+  width: 10em;
+  background-color: transparent;
+  background-image: url('http://bwtf.com/files/news/pic_c37_002_2.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  z-index: 10;
+}
+
+#animate-button span {
+  position: absolute;
+  top: 0;
+  right: 1em;
+  font-size: 2em;
+  text-shadow: -1px 3px black;
+}
+
+.perspective-container {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 4em;
+  width: 800px;
+  height: 100vh;
+  transform: rotateX(25deg) translateY(600px);
+}
+
+.crawl-text-container {
+  margin: 0 auto;
+  max-width: 90%;
+}
+
+.crawl-text {
+  font-family: 'Francois One', sans-serif;
+  color: #ffd700;
+  position: relative;
+  font-size: 3.5em;
+  font-weight: 700;
+  text-align: justify;
+}

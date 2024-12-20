@@ -1,0 +1,181 @@
+.gif-tv {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.gif-tv .viewport {
+  position: absolute;
+  top: 9%;
+  right: 26%;
+  bottom: 15%;
+  left: 7%;
+  background: #161616;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.gif-tv .viewport .video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gif-tv .viewport .pixels {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 2;
+}
+
+.gif-tv .tv {
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Title */
+.title-container {
+  position: absolute;
+  top: -8rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 2;
+}
+
+.tv-title {
+  font-family: VT323;
+  font-size: 4rem;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  text-shadow: 0 2px 8px #999;
+  color: #ccc;
+  margin: 0;
+}
+
+/* Side text */
+.cta, .coming-soon {
+  position: absolute;
+  right: 0;
+  transform-origin: bottom left;
+  transform: translate(100%, 0) rotate(90deg);
+  text-shadow: 0 2px 8px #999;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: VT323;
+  font-size: 1.5rem;
+  color: #ccc;
+  white-space: nowrap;
+}
+
+.cta {
+  top: 40%;
+}
+
+.coming-soon {
+  top: 60%;
+}
+
+/* Controls */
+.gif-tv button.dial {
+  position: absolute;
+  right: 4.1%;
+  width: 10.2%;
+  padding: 0;
+  border-radius: 50%;
+  border: 3px solid #DFDDD1;
+  background: transparent;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+  z-index: 3;
+}
+
+.gif-tv button.dial:before {
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
+
+.gif-tv button.dial:hover {
+  border-color: #00aaff;
+}
+
+.gif-tv button.dial:active {
+  border-color: #007fff;
+}
+
+#gif_tv_button_channel { top: 48.6%; }
+#gif_tv_button_volume { top: 66.9%; }
+
+.gif-tv button.switch {
+  position: absolute;
+  right: 16.1%;
+  width: 1.6%;
+  padding: 0;
+  border-radius: 50%;
+  border: none;
+  background: #DFDDD1;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  z-index: 3;
+}
+
+.gif-tv button.switch:before {
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
+
+.gif-tv button.switch:hover {
+  background: #00aaff;
+}
+
+.gif-tv button.switch:active {
+  background: #007fff;
+}
+
+#gif_tv_button_mute { top: 52.6%; }
+#gif_tv_button_hd { top: 59.1%; }
+#gif_tv_button_hue_shift { top: 65.5%; }
+#gif_tv_button_bright { top: 71.7%; }
+#gif_tv_button_color { top: 78.1%; }
+
+/* Animation for hue shift */
+@keyframes rainbow_barf {
+  0% { filter: hue-rotate(0deg); }
+  25% { filter: hue-rotate(90deg); }
+  50% { filter: hue-rotate(180deg); }
+  75% { filter: hue-rotate(270deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .gif-tv {
+    margin: 4rem auto;
+  }
+
+  .title-container {
+    top: -4rem;
+  }
+
+  .tv-title {
+    font-size: 2.5rem;
+  }
+
+  .cta, .coming-soon {
+    font-size: 1.2rem;
+  }
+}

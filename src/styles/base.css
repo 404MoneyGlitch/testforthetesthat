@@ -1,0 +1,39 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  background-color: #000;
+  font-family: Roboto;
+  color: #ccc;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body:before {
+  position: fixed;
+  z-index: -999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('https://res.cloudinary.com/cyborgspaceviking/image/upload/v1571119521/space-background_fowfq3.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+  content: '';
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
